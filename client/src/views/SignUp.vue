@@ -21,8 +21,6 @@
           <v-btn type="submit" :disabled="!valid">SignUp</v-btn>
         </v-form>
 
-        <div v-for="user in users().data" :key="user._id">{{ user.email }}</div>
-
         <v-progress-circular v-if="loading" :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
       </v-layout>
     </v-slide-y-transition>
@@ -68,10 +66,15 @@ export default {
         password: this.user.password
       };
 
-      await user.save().then(user => {
-        // console.log(user);
-        this.$router.push("/about");
-      });
+      user
+        .save()
+        .then(user => {
+          // console.log(user);
+          this.$router.push("/about");
+        })
+        .catch(e => {
+          console.error("SignUp ERROR ...", e);
+        });
     }
   }
 };
