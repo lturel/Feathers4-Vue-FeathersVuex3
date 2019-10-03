@@ -69,7 +69,7 @@ export default {
       };
 
       await user.save().then(user => {
-        console.log(user);
+        // console.log(user);
         this.$router.push("/about");
       });
     }
