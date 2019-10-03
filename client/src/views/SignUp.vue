@@ -53,7 +53,7 @@ export default {
     ...mapState("users", { loading: "isCreatePending" })
   },
   methods: {
-    ...mapActions("users", ["create", "find"]),
+    ...mapActions("users", ["save", "create", "find"]),
     ...mapActions("auth", ["authenticate"]),
 
     async createUser() {
