@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import SignUp from './views/SignUp.vue';
 import Login from './views/Login.vue';
 import Secret from './views/Secret.vue';
+import About from './views/About.vue';
 
 import store from './store/store';
 
@@ -34,11 +35,7 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: About,
       beforeEnter(to, from, next) {
         store
           .dispatch('auth/authenticate')
