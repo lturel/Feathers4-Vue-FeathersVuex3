@@ -70,7 +70,14 @@ export default {
         .save()
         .then(user => {
           // console.log(user);
-          this.$router.push("/about");
+          this.authenticate({ ...this.user, strategy: "local" })
+            .then(() => {
+              console.log(" Logged in ...");
+              this.$router.push("/about");
+            })
+            .catch(e => {
+              console.error("Authentication ERROR ...", e);
+            });
         })
         .catch(e => {
           console.error("SignUp ERROR ...", e);
