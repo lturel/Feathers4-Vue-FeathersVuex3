@@ -6,7 +6,7 @@ All the options are default values creating NeDB storage. Be careful to use late
 
 Base of client side can be generated vue-cli (v3 or later) and adding Vuetify.
 
-Related to Feathers-Vuex2.0,  the guiding given in issues [#216](https://github.com/feathers-plus/feathers-vuex/pull/216) and [#266](https://github.com/feathers-plus/feathers-vuex/issues/266) are applied.
+Related to Feathers-Vuex2.0,  the guiding given in issues [#216](https://github.com/feathers-plus/feathers-vuex/pull/216) and [#266](https://github.com/feathers-plus/feathers-vuex/issues/266) are applied. Or simply refer to latest info on [https://vuex.feathersjs.com/].
 
 For client side, inspiration comes from  [Coding Garden with CJ](https://www.youtube.com/watch?v=DGPfCT5dDQE&list=PLM_i0obccy3sv9jbUKBKojBHDMIZO8IhQ),  
 
