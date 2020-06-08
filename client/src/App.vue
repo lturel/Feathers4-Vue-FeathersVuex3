@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-toolbar-title>Feathers-4 + F-Vuex-2.0</v-toolbar-title>
+      <v-toolbar-title>Feathers-4 + F-Vuex-3.x</v-toolbar-title>
       <div class="flex-grow-1"></div>
 
       <v-spacer></v-spacer>
