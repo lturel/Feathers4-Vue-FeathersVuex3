@@ -1,35 +1,37 @@
-// Bring in the imports from the feathers-client.js file.
+// src/store/services/users.js
 import feathersClient, {
   makeServicePlugin,
-  BaseModel,
-} from '../../feathers-client';
+  BaseModel
+} from "../../feathers-client";
 
 // Extend the base class
 class User extends BaseModel {
   constructor(data, options) {
     super(data, options);
   }
-  static modelName = 'User';
+  // Required for $FeathersVuex plugin to work after production transpile.
+  static modelName = "User";
+  // Define default properties here
   static instanceDefaults() {
     return {
-      email: '',
-      password: '',
-      displayName: '',
-      imageUrl: '',
+      email: "",
+      password: "",
+      displayName: "",
+      imageUrl: ""
     };
   }
   get fullName() {
     return `${this.email} ${this.displayName}`;
   }
 }
-const servicePath = 'users';
+const servicePath = "users";
 const servicePlugin = makeServicePlugin({
   Model: User,
   service: feathersClient.service(servicePath),
-  servicePath,
+  servicePath
 });
 
-// Optionally add service-level hooks, here:
+// Setup the client-side Feathers hooks.
 feathersClient.service(servicePath).hooks({
   before: {
     all: [],
@@ -38,7 +40,7 @@ feathersClient.service(servicePath).hooks({
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
   },
   after: {
     all: [],
@@ -47,7 +49,7 @@ feathersClient.service(servicePath).hooks({
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
   },
   error: {
     all: [],
@@ -56,8 +58,8 @@ feathersClient.service(servicePath).hooks({
     create: [],
     update: [],
     patch: [],
-    remove: [],
-  },
+    remove: []
+  }
 });
 
 export default servicePlugin;

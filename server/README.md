@@ -1,6 +1,6 @@
-# server-nedb
+# server
 
-> 
+> Sample project server side
 
 ## About
 
@@ -14,7 +14,7 @@ Getting up and running is as easy as 1, 2, 3.
 2. Install your dependencies
 
     ```
-    cd path/to/server-nedb
+    cd path/to/server
     npm install
     ```
 

@@ -2,8 +2,18 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
-        <v-form v-if="!loading" v-model="valid" @submit.prevent="createUser" @keydown.prevent.enter>
-          <v-text-field v-model="user.email" :rules="notEmptyRules" label="E-mail" required></v-text-field>
+        <v-form
+          v-if="!loading"
+          v-model="valid"
+          @submit.prevent="createUser"
+          @keydown.prevent.enter
+        >
+          <v-text-field
+            v-model="user.email"
+            :rules="notEmptyRules"
+            label="E-mail"
+            required
+          ></v-text-field>
           <v-text-field
             v-model="user.password"
             :rules="notEmptyRules"
@@ -21,7 +31,13 @@
           <v-btn type="submit" :disabled="!valid">SignUp</v-btn>
         </v-form>
 
-        <v-progress-circular v-if="loading" :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
+        <v-progress-circular
+          v-if="loading"
+          :size="70"
+          :width="7"
+          indeterminate
+          color="primary"
+        ></v-progress-circular>
       </v-layout>
     </v-slide-y-transition>
   </v-container>

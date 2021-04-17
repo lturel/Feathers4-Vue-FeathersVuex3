@@ -6,19 +6,19 @@
 
       <v-spacer></v-spacer>
       <div v-if="!user">
-        <v-btn flat :to="{ name: 'login'}">Login</v-btn>
-        <v-btn flat :to="{ name: 'signup'}">SignUp</v-btn>
+        <v-btn text :to="{ name: 'login' }">Login</v-btn>
+        <v-btn text :to="{ name: 'signup' }">SignUp</v-btn>
       </div>
       <div v-if="user">
-        <v-btn flat :to="{ name: 'about'}">About</v-btn>
-        <v-btn flat :to="{ name: 'secret'}">Secret</v-btn>
-        <v-btn flat @click="logout">LogOut</v-btn>
+        <v-btn text :to="{ name: 'about' }">About</v-btn>
+        <v-btn text :to="{ name: 'secret' }">Secret</v-btn>
+        <v-btn text @click="logout">LogOut</v-btn>
       </div>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <router-view />
-    </v-content>
+    </v-main>
 
     <v-footer :fixed="fixed" app>
       <span>&copy; 2019</span>
